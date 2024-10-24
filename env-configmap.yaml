@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: env-config
 data:
-  POSTGRES_HOST: cdr.cppja5bh9orh.us-east-1.rds.amazonaws.com
+  POSTGRES_HOST: cdr.cf5hovgip9lf.us-east-1.rds.amazonaws.com
   POSTGRES_DB: postgres
   AWS_REGION: us-east-1
   AWS_PROFILE: default
