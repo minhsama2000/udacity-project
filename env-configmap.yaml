@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: env-config
+data:
+  POSTGRES_HOST: cdr.cppja5bh9orh.us-east-1.rds.amazonaws.com
+  POSTGRES_DB: postgres
+  AWS_REGION: us-east-1
+  AWS_PROFILE: default
+  AWS_BUCKET: test-842876642980-dev
+  JWT_SECRET: testing
+  URL: http://localhost:8100
+  # Add other non-confidential environment variables here

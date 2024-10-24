@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reverseproxy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: reverseproxy
+  template:
+    metadata:
+      labels:
+        app: reverseproxy
+    spec:
+      containers:
+      - name: reverseproxy
+        image: minhsama2000/udagram-reverseproxy:v1
+        ports:
+        - containerPort: 8080
+        volumeMounts:
+        - name: nginx-config
+          mountPath: /etc/nginx/nginx.conf
+          subPath: nginx.conf
+      volumes:
+      - name: nginx-config
+        configMap:
+          name: nginx-config
