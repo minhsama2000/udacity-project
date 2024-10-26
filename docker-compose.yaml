@@ -19,6 +19,9 @@ services:
       AWS_PROFILE: $AWS_PROFILE 
       AWS_BUCKET: $AWS_BUCKET
       JWT_SECRET: $JWT_SECRET
+      AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+      AWS_SECRET_ACCESS_KEY: $SECRET_ACCESS_KEY
+      AWS_SESSION_TOKEN: $WS_SESSION_TOKEN
       URL: "http://localhost:8100"
   backend-feed:
     image: udagram-api-feed
@@ -33,6 +36,9 @@ services:
       AWS_PROFILE: $AWS_PROFILE 
       AWS_BUCKET: $AWS_BUCKET
       JWT_SECRET: $JWT_SECRET
+      AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+      AWSSECRET_ACCESS_KEY: $SECRET_ACCESS_KEY
+      AWS_SESSION_TOKEN: $WS_SESSION_TOKEN
       URL: "http://localhost:8100"
   frontend:
     image: udagram-frontend:local

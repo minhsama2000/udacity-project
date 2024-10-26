@@ -7,6 +7,7 @@ import {IndexRouter} from './controllers/v0/index.router';
 import bodyParser from 'body-parser';
 import {config} from './config/config';
 import {V0_USER_MODELS} from './controllers/v0/model.index';
+import AWS = require('aws-sdk');
 
 
 (async () => {
@@ -17,6 +18,8 @@ import {V0_USER_MODELS} from './controllers/v0/model.index';
 
   const app = express();
   const port = process.env.PORT || 8080;
+  console.log("CONFIG: ", config)
+  console.log("CREDENTIALS: ", AWS.config.credentials)
 
   app.use(bodyParser.json());
 

@@ -9,8 +9,9 @@ import { FeedItem } from '../models/feed-item.model';
 })
 export class FeedItemComponent implements OnInit {
   @Input() feedItem: FeedItem;
-
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    // console.log("FEED-ITEM: ", this.feedItem);
+  }
 }
