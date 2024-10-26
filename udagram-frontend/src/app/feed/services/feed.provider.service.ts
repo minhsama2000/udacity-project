@@ -16,6 +16,7 @@ export class FeedProviderService {
     const req = await this.api.get('/feed');
     const items = <FeedItem[]> req.rows;
     this.currentFeed$.next(items);
+    // console.log("FeedProviderService.getFeed INFO items: ", items);
     return Promise.resolve(this.currentFeed$);
   }
 
